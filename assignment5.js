@@ -6,6 +6,7 @@
 // -----------------------------------------------------
 let minNum = 50
 let maxNum = 100
+console.log(Math.round(Math.random))
 //let randomNum = Math.floor(Math.random()*(maxNum-minNum)+minNum)
 let randomNum = Math.floor(Math.random()*(100-50)+50)
 console.log(randomNum)
