@@ -189,12 +189,12 @@ console.log(check5)
   console.log(max-min)
 
 // Compare the value of (min - average) and (max - average), use abs() method
-let finalcheck = (min-check5/max-check5)
-console.log(Math.abs(finalcheck))
+let fcheck = (min-check5/max-check5)
+console.log(Math.abs(fcheck))
 
   //Slice the first ten countries from the countries array
-let firstten = countries.slice(0,10)
-console.log(firstten)
+let ten = countries.slice(0,10)
+console.log(ten)
   // Find the middle country(ies) in the countries array
   console.log(Math.round(countries.length/2))
   console.log(countries[6])
@@ -213,16 +213,16 @@ console.log(firstten)
     'Kenya'
   ];
 
-  fisrthalf=[]
-  secondhalf=[]
+  first=[]
+  second=[]
   countries1.push("India")
   for(let i=0;i<=countries1.length-1;i++){
     if(i>=6){
-        fisrthalf.push(countries1[i])
+        first.push(countries1[i])
     }
     else{
-        secondhalf.push(countries1[i])
+        second.push(countries1[i])
     }
   }
-  console.log("Firsthalf",fisrthalf)
-  console.log("secondhalf",secondhalf)
+  console.log("First",first)
+  console.log("second",second)
