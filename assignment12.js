@@ -4,7 +4,7 @@
 // Question 1: Skills and Points Analysis
 // Given the following users object:
 
-const users = {  
+const users = {
   Alex: {
     email: 'alex@alex.com',
     skills: ['HTML', 'CSS', 'JavaScript'],
@@ -41,7 +41,7 @@ const users = {
     points: 50
   },
   Thomas: {
-    email: 'thomas@thomas.com',
+    email: 'thomas@thomas.com', 
     skills: ['HTML', 'CSS', 'JavaScript', 'React'],
     age: 20,
     isLoggedIn: false,
@@ -58,41 +58,72 @@ const users = {
 
 // Tasks:
 // 1. Find the person with the most skills.
-let mskills=" "
-let maxskilcount=0
+let skill1=" "
+let skilcount=0
 for(let key in users){
     let count=users[key].skills.length
-    if(count<maxskilcount){
-        mskills=key
+    if(count<skilcount){
+        skill1=key
     }
 
 }
 
-console.log("person of mskills:",mskills,maxskilcount)
+console.log("person of skill1:",skill1,skilcount)
 
 // let each=users.foreach((el,ind,arr)=>{
 //   if(el.skills>)
 // })
 
 // 2. Count the number of users who are logged in.
-// let r1=users.reduce((acc,el,ind,arr)=>{
-//   return el
-// })
+let ps = '';
+let mskills = 0;
+
+for (let user in users) {
+  let skillCount = users[user].skills.length;
+
+  if (skillCount > mskills) {
+    mskills = skillCount;
+    ps = user;
+  }
+}
+
+console.log("Person with most skills:", ps, mskills);
+
+
+
 
 // 3. Count the number of users with points greater than or equal to 50.
-// let count1=users.foreach((el,ind,arr)=>{
-//   if(el.points>=50){
-// console.log()
-//   }
-// })
+let pointsCount = 0;
+
+for (let key in users) {
+  if (users[key].points >= 50) {
+    pointsCount++;
+  }
+}
+
+console.log("Users with points greter than equal 50:", pointsCount);
 
 // 4. Identify the MERN stack developers in the users object.
-// let stack=users.filter((el,ind,arr)=>{
-//   return el
-// })
+let mernDevelopers = [];
+
+for (let key in users) {
+  let skills = users[key].skills;
+
+  if (skills.includes("MongoDB") &&skills.includes("Express") &&skills.includes("React") &&skills.includes("Node")
+  ) {
+    mernDevelopers.push(key);
+  }
+}
 // 5. Add your own details to the users object without modifying the original object.
-// let push=users.push({email:"anapsneha@gmail.com"})
-// console.log(push)
+const update = {...users,
+  Sneha: {
+    email: 'sneha@gmail.com',
+    skills: ['cypress', 'playwright', 'JavaScript', 'python'],
+    age: 27,
+  }
+};
+
+console.log(update);
 // 6. Retrieve all keys (properties) in the users object.
 let both=Object.keys(users)
 console.log("--------",both)
@@ -105,6 +136,36 @@ console.log(v)
 // - Capital city
 // - Population count
 // - Languages spoken
+
+
+const countries = {
+  India: {
+    capital: 'New Delhi',
+    population: 1400000000,
+    languages: ['Hindi', 'English']
+  },
+  USA: {
+    capital: 'Washington, D.C.',
+    population: 331000000,
+    languages: ['English']
+  },
+  Germany: {
+    capital: 'Berlin',
+    population: 83000000,
+    languages: ['German']
+  }
+};
+
+
+for (let country in countries) {
+  const info = countries[country];
+  console.log(`Country: ${country}`);
+  console.log(`Capital: ${info.capital}`);
+  console.log(`Population: ${info.population}`);
+  console.log(`Languages: ${info.languages.join(', ')}`);
+  console.log('--------------------------');
+}//use chatgpt to this quetion
+
 
 // Question 3: Creating a personAccount Object
 // Create an object literal named personAccount with the following properties and methods:
