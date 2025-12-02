@@ -39,3 +39,15 @@
 //     revstring+=str12[i]
 // }
 // console.log(revstring)
+///////=====================================================================================================
+
+
+
+
+//functions
+ 
+
+function myinfo(name,address,mobileno){
+    console.log("sneha","sangamner",7887647323)
+}
+myinfo()
