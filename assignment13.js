@@ -548,6 +548,10 @@ console.log(sameDataType([1, 'a', 3]))
 console.log(sameDataType([true, false]))
 
 // 18 JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+function support(variablename){
+    if (typeof variablename!==string){
+    }
+}
 
 // 19 Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
 
